@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Plateforme.tscn" type="PackedScene" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "UpDown"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlateformeCarre/Plateforme:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1800, 145 ), Vector2( 1800, 0 ), Vector2( 2100, 0 ), Vector2( 2100, 145 ), Vector2( 1800, 145 ) ]
+}
+
+[node name="PlateformeCarre" type="AnimationPlayer"]
+autoplay = "UpDown"
+playback_speed = 0.9
+anims/UpDown = SubResource( 1 )
+
+[node name="Plateforme" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1800, 145 )

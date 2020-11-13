@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/Plateforme.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Fin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/PlateformeHorizontale.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/PlateformeVerticale.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Area2DVide.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/PlateformeDiagonale.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/PlateformeCarre.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=8]
+
+[node name="Main" type="Node"]
+
+[node name="Plateforme" parent="." instance=ExtResource( 1 )]
+region_rect = Rect2( 0.228783, 25.2935, 95.995, 40.0407 )
+
+[node name="Plateforme2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 200, 230 )
+
+[node name="Plateforme3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 395, 295 )
+
+[node name="Plateforme4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 600, 230 )
+
+[node name="Plateforme5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 950, -150 )
+
+[node name="Plateforme6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1650, 145 )
+
+[node name="Plateforme7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2350, 145 )
+
+[node name="Plateforme8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2550, 65 )
+
+[node name="Plateforme9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2750, -15 )
+
+[node name="Fin" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3000, 0 )
+
+[node name="PlateformeHorizontale" parent="." instance=ExtResource( 3 )]
+
+[node name="PlateformeVerticale" parent="." instance=ExtResource( 4 )]
+
+[node name="Area2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2278.18, 691.453 )
+
+[node name="PlateformeDiagonale" parent="." instance=ExtResource( 6 )]
+
+[node name="PlateformeCarre" parent="." instance=ExtResource( 7 )]
+
+[node name="Player" parent="." instance=ExtResource( 8 )]
+position = Vector2( -4, -50 )
